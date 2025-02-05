@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@import 'sass/colors';
+@import 'sass/layout';
+@import 'sass/spacing';
+@import 'sass/typograph';
+
 
 html{
   scroll-behavior: smooth;
@@ -47,4 +52,20 @@ svg,img{
   //height: auto;
 }
 
+.desktop-only{
+  @include responsive(s){
+    display: none;
+  }
+}
 
+
+@import 'sass/menu';
+@import 'sass/icons';
+@import 'sass/buttons';
+@import 'sass/borders';
+
+// sections
+@import 'sass/header';
+@import 'sass/sechero';
+@import 'sass/sectimer';
+@import 'sass/sectodo';
