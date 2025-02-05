@@ -9,8 +9,12 @@
       <link rel="stylesheet" href="./css/index.css">
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-      <!-- SCRIPTS -->
+      <!-- SCRIPTS + BABEl -->
       <script src="./js/svg-inject.min.js"></script>
+      <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      
   </head>
   <body>
 
@@ -84,6 +88,28 @@
         </section>
 
 
+
+          <!--///////////////////////////
+                INICIO SEC TIMER
+        ///////////////////////////
+    -->
+
+    <section class="container">
+      <div class="row">
+        <div class="grid-nobreak-12 text-center">
+          <h2 class="color-gradient">Contador Regressivo</h2>
+          <div id="countdownDisplay" style="font-family: 'Rubik', sans-serif; font-size:3rem; font-weight:bold; margin:16px 0; color: #D8DBE3; ">00:10</div>
+            <button id="pauseBtn" class="btn-timer mt-2">Pause</button>
+            <button id="stopBtn" class="btn-timer ml-1">Stop</button>
+            <button id="resetBtn" class="btn-timer ml-1">Reset</button>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
   </body>
 
 
@@ -100,6 +126,7 @@
         ///////////////////////////
     -->
   <script src="./js/timer.js"></script>
-  <script src="./js/todo-list.js"></script>
+  <script src="./js/todo-list.jsx"></script>
   <script src="./js/header.js"></script>
+
 </html>

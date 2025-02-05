@@ -1,0 +1,21 @@
+.btn-timer{
+  width:60px;
+  height:60px;
+
+
+  border-radius:50%;
+  @include typeface-2(p3, desktop);
+  background: linear-gradient(225deg, #5390E3 8.12%, #1357B3 92.21%);
+
+
+  display: inline-block;
+  color: $white-light;
+
+
+  border: 0;
+  cursor:pointer;
+}
+
+
+
+
