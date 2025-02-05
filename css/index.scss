@@ -1,0 +1,50 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  width: 100%;
+  position: relative;
+
+  background-color: #ccc;
+
+  &::-webkit-scrollbar{
+    padding-right: 2px;
+    width: 8px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background: #ff8000;
+  }
+}
+
+.border{
+  border: 1px solid red;
+}
+
+.hidden{
+  overflow: hidden;
+}
+
+.relative{
+  position: relative;
+}
+
+
+// reset svg/img
+svg,img{
+  width: 100%;
+  //height: auto;
+}
+
+
