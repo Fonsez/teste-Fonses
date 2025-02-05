@@ -32,10 +32,10 @@
 
       
       .letter-g {
-        animation: drawGF 5s ease-in-out infinite alternate;
+        animation: drawGF 7s ease-in-out infinite alternate;
       }
       .letter-f {
-        animation: drawGF 5s ease-in-out infinite alternate 1s; 
+        animation: drawGF 7s ease-in-out infinite alternate 1s; 
         /* 1s de delay para começarem em momentos diferentes */
       }
 

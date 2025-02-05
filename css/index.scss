@@ -52,6 +52,7 @@ svg,img{
   //height: auto;
 }
 
+
 .desktop-only{
   @include responsive(s){
     display: none;
@@ -69,3 +70,6 @@ svg,img{
 @import 'sass/sechero';
 @import 'sass/sectimer';
 @import 'sass/sectodo';
+
+
+

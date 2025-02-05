@@ -1,0 +1,146 @@
+<svg
+  viewBox="0 0 500 500"
+  xmlns="http://www.w3.org/2000/svg"
+  style="background: none;"
+>
+  <defs>
+    <!-- Gradiente linear para “circuito” / arcos -->
+    <linearGradient id="techGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5390E3" />
+      <stop offset="100%" stop-color="#1357B3" />
+    </linearGradient>
+
+    <!-- Gradiente radial para “planetas” (bolinhas) -->
+    <radialGradient id="planetGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#5390E3" stop-opacity="0.9" />
+    </radialGradient>
+
+    <!-- Filtro de “glow” para as órbitas -->
+    <filter id="arcGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <!-- Leve desfoque -->
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blurOut" />
+      <!-- Mistura a camada original com a borrada -->
+      <feMerge>
+        <feMergeNode in="blurOut" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      /* ===================
+        1) ORBITAS / ARCOS
+         =================== */
+      .orbit {
+        fill: none;
+        stroke: url(#techGradient);
+        stroke-width: 2;
+        filter: url(#arcGlow); /* Adiciona glow */
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        animation: orbitDraw 6s ease-in-out infinite alternate;
+      }
+      @keyframes orbitDraw {
+        0%   { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0;   }
+      }
+
+      /* ===================
+          2) PLANETAS (bolinhas orbitando)
+         =================== */
+      .planet {
+        fill: url(#planetGrad);
+        stroke: none;
+        filter: drop-shadow(0 0 4px rgba(83,144,227,0.5));
+      }
+
+      /* ===================
+          3) ESTRELAS “PISCANTES”
+         =================== */
+      .star {
+        fill: #ffffff;
+        opacity: 0.7;
+        animation: starFlicker 3s infinite;
+        /* tempo e loop infinito */
+      }
+      /* Flicker aleatório */
+      @keyframes starFlicker {
+        0%   { opacity: 0.2; }
+        50%  { opacity: 1;   }
+        100% { opacity: 0.2; }
+      }
+    </style>
+  </defs>
+
+  <!-- =============================
+        FUNDO DE “ESTRELAS”
+        Coloque algumas bolinhas em posições aleatórias
+        ============================= -->
+  <circle cx="80"  cy="100" r="2" class="star" style="animation-delay:0.5s"/>
+  <circle cx="400" cy="60"  r="2" class="star" style="animation-delay:1s" />
+  <circle cx="350" cy="300" r="3" class="star" style="animation-delay:2s" />
+  <circle cx="150" cy="350" r="2.5" class="star" style="animation-delay:1.5s" />
+  <circle cx="250" cy="40"  r="2" class="star"/>
+
+  <!-- =============================
+        ÓRBITA 1 (ellipse)
+        ============================= -->
+  <ellipse
+    class="orbit"
+    cx="250" cy="250"
+    rx="160" ry="40"
+  />
+
+  <!-- ÓRBITA 2 (rotacionada) -->
+  <ellipse
+    class="orbit"
+    cx="250" cy="250"
+    rx="120" ry="60"
+    transform="rotate(45, 250,250)"
+  />
+
+  <!-- =============================
+        PATH para orbitar Planeta 1
+        ============================= -->
+  <path id="orbitPath1"
+    d="M90,250 
+        A160,40 0 1,1 410,250
+        A160,40 0 1,1 90,250
+        Z"
+    fill="none"
+  />
+
+  <!-- Planeta 1 (6px) percorrendo orbitPath1 -->
+  <circle r="6" class="planet">
+    <animateMotion
+      dur="8s"
+      repeatCount="indefinite"
+      rotate="auto"
+      path="M90,250 A160,40 0 1,1 410,250 A160,40 0 1,1 90,250 Z"
+    />
+  </circle>
+
+  <!-- =============================
+        PATH para orbitar Planeta 2
+        ============================= -->
+  <path id="orbitPath2"
+    d="M130,250 
+        A120,60 0 1,1 370,250
+        A120,60 0 1,1 130,250
+        Z"
+    fill="none"
+    transform="rotate(45, 250,250)"
+  />
+
+  <!-- Planeta 2 (8px) percorrendo orbitPath2 -->
+  <circle r="8" class="planet">
+    <animateMotion
+      dur="10s"
+      repeatCount="indefinite"
+      rotate="auto"
+      path="M130,250 A120,60 0 1,1 370,250 A120,60 0 1,1 130,250 Z"
+      transform="rotate(45, 250,250)"
+    />
+  </circle>
+
+</svg>

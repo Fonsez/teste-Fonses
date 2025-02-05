@@ -1608,8 +1608,8 @@ header nav .menu li {
   }
 }
 header .logo {
-  max-width: 64px;
-  min-width: 48px;
+  max-width: 38px;
+  min-height: 38px;
 }
 header .bx {
   width: 40px;
@@ -1690,4 +1690,12 @@ header .cta-mobile {
   header .cta-mobile {
     display: block;
   }
+}
+
+.thumb img {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+.thumb:hover img {
+  transform: scale(1.1);
 }/*# sourceMappingURL=index.css.map */
