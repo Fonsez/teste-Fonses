@@ -18,32 +18,46 @@
                 INICIO HEADER
         ///////////////////////////
     -->
-        <header class="border">
+        <header class="px-2 py-1">
 
           <nav>
-            <div class="logo">
-              <a href=""><img src="" alt="logo"></a>
+            <div>
+              <a href=""><img class="logo" src="./assets/icons/logo.svg" alt="logo" onload="SVGInject(this)" ></a>
             </div>
 
             <!-- navegação -->
-            <ul class="menu border">
-              <li><a href="https://www.linkedin.com/in/fonses/">Linkedin</a></li>
-              <li><a href="https://github.com/Fonsez">Github</a></li>
+            <ul class="menu">
+              <li><a class="link-underline" href="https://www.linkedin.com/in/fonses/">Linkedin</a></li>
+              <li><a class="link-underline" href="https://github.com/Fonsez">Github</a></li>
             </ul>
           </nav>
 
           <!-- hamburger -->
           <div class="bx"></div>
 
-          <div class="cta-desktop">
+          <div class="cta-desktop btn">
             <a href="https://api.whatsapp.com/send?phone=5541984656059&text=Olá,%20você%20foi%20aprovado!">Contato</a>
           </div>
 
           <div class="cta-mobile">
-            <a href="https://api.whatsapp.com/send?phone=5541984656059&text=Olá,%20você%20foi%20aprovado!">Contato</a>
+            <a class="color-primary" href="https://api.whatsapp.com/send?phone=5541984656059&text=Olá,%20você%20foi%20aprovado!">Contato</a>
           </div>
-          
         </header>
+
+
+        <!--///////////////////////////
+                INICIO MENU MOBILE
+        ///////////////////////////
+    -->
+
+    <div class="relative">
+      <div class="menu-mobile">
+        <ul class="nav-mobile">
+          <li><a href="https://www.linkedin.com/in/fonses/" class="link-menu-mobile">Linkedin</a></li>
+          <li><a href="https://github.com/Fonsez" class="link-menu-mobile">Github</a></li>
+        </ul>
+      </div>
+    </div>
 
 
 
@@ -64,4 +78,5 @@
     -->
   <script src="./js/timer.js"></script>
   <script src="./js/todo-list.js"></script>
+  <script src="./js/header.js"></script>
 </html>

@@ -1,0 +1,61 @@
+
+.btn{
+  display: inline-block;
+  color: $white-light;
+
+  padding: 12px 34px;
+
+  @include typeface-2(p3, desktop);
+
+  background: linear-gradient(225deg, #5390E3 8.12%, #1357B3 92.21%);
+
+  border-radius: 4px;
+  border: 0;
+
+  cursor: pointer;
+  transition: .3s ease;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+
+a{
+  text-decoration: none;
+
+  @include typeface-2(p3, desktop);
+
+  color: $white-light;
+
+  transition: .4s ease;
+
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+
+.link-underline {
+  position: relative; /* Importante para o pseudo-elemento */
+  display: inline-block; /* Garante que ::after acompanhe o tamanho do texto */
+
+  /* Remove ou sobescreve a opacidade do :hover se quiser */
+  &:hover {
+    opacity: 0.7; /* Se quiser evitar que fique opaco */
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;           /* inicia com 0 */
+    height: 2px;        /* espessura da linha */
+    background: currentColor; /* cor do texto */
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
