@@ -9,7 +9,7 @@
 <div align="center">
 
 [![Tecnologias](https://img.shields.io/static/v1?label=Tecnologias&message=HTML%20|%20CSS%20|%20SCSS%20|%20JavaScript%20|%20React&color=blue&labelColor=0F172A&style=flat-square)](#-tecnologias)  
-[![Projeto](https://img.shields.io/static/v1?label=Projeto&message=Landing%20Page&color=green&labelColor=0F172A&style=flat-square)](#-projeto)  
+[![Projeto](https://img.shields.io/static/v1?label=Teste&message=Vouch%20Soluções&color=green&labelColor=0F172A&style=flat-square)](#-projeto)  
 [![Licença](https://img.shields.io/static/v1?label=Licença&message=MIT&color=orange&labelColor=0F172A&style=flat-square)](#memo-licença) 
 
 </div>
