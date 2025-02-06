@@ -11,9 +11,13 @@
   display: inline-block;
   color: $white-light;
 
-
+  transition: .5s ease;
   border: 0;
   cursor:pointer;
+
+  &:hover{
+    opacity: 0.7;
+  }
 }
 
 

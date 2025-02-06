@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 * {
   padding: 0;
@@ -34,6 +35,10 @@
 
 .color-yellow {
   color: #FFCE52;
+}
+
+.bg-section {
+  background-color: rgba(15, 20, 31, 0.5);
 }
 
 .grid-1 {
@@ -1457,7 +1462,7 @@ svg, img {
   width: 100%;
   height: 100vh;
   margin-top: 80px;
-  position: absolute;
+  position: fixed !important;
   top: 0;
   left: -100%;
   z-index: 990;
@@ -1539,6 +1544,27 @@ a:hover {
 }
 .link-underline:hover::after {
   width: 100%;
+}
+
+select, option {
+  height: 48px;
+}
+
+input {
+  accent-color: #1B69D2;
+}
+
+input, select, option, textarea {
+  padding: 10px 12px;
+  background-color: #151B26;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  color: #F7F9FC;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
 }
 
 .bb-black {
@@ -1692,6 +1718,11 @@ header .cta-mobile {
   }
 }
 
+.active-header {
+  transition: 0.7s;
+  box-shadow: 0px 51px 80px 0px rgba(83, 144, 227, 0.08), 0px 15.375px 24.118px 0px rgba(83, 144, 227, 0.05), 0px 6.386px 10.017px 0px rgba(83, 144, 227, 0.04), 0px 2.31px 3.623px 0px rgba(83, 144, 227, 0.03);
+}
+
 .thumb img {
   transform: scale(1.05);
   transition: 0.5s ease;
@@ -1711,6 +1742,132 @@ header .cta-mobile {
   background: linear-gradient(225deg, #5390E3 8.12%, #1357B3 92.21%);
   display: inline-block;
   color: #F7F9FC;
+  transition: 0.5s ease;
   border: 0;
   cursor: pointer;
+}
+.btn-timer:hover {
+  opacity: 0.7;
+}
+
+/* Cartão principal do To-Do */
+.todo-card {
+  border: 1px solid #151B26;
+  border-radius: 4px;
+  background-color: rgba(15, 20, 31, 0);
+  transition: 0.2s ease;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+  /* Container do input e botão “Add” */
+  /* O input em si */
+  /* Botão “Add” */
+  /* Lista de tarefas */
+  /* O texto da tarefa */
+  /* Quando a tarefa está concluída */
+  /* Botão de remoção “X” */
+}
+.todo-card:hover {
+  background-color: rgba(15, 20, 31, 0.2);
+}
+.todo-card .todo-input-container {
+  display: flex;
+  accent-color: #1B69D2;
+  padding: 10px 12px;
+  background-color: rgba(15, 20, 31, 0);
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  color: #F7F9FC;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+}
+.todo-card .todo-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-right: 10px;
+  border: 1px solid #424344;
+  border-radius: 4px;
+  background: #2B2B2C;
+  color: #F7F9FC;
+}
+.todo-card .todo-input::-moz-placeholder {
+  color: #717274;
+}
+.todo-card .todo-input::placeholder {
+  color: #717274;
+}
+.todo-card .todo-add-btn {
+  display: inline-block;
+  color: #F7F9FC;
+  padding: 12px 34px;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+  background: linear-gradient(225deg, #5390E3 8.12%, #1357B3 92.21%);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.todo-card .todo-add-btn:hover {
+  opacity: 0.7;
+}
+.todo-card .todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.todo-card .todo-item {
+  display: flex;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #424344;
+}
+.todo-card .todo-label {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.todo-card .todo-label.done {
+  text-decoration: line-through;
+  color: #717274;
+}
+.todo-card .todo-remove-btn {
+  background: transparent;
+  border: none;
+  color: #d03333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.todo-card .todo-remove-btn:hover {
+  transform: scale(1.2);
+}
+.todo-card .circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #717274;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.todo-card .circle.filled {
+  background-color: #5390E3; /* cor de “done” */
+  border-color: #5390E3;
 }/*# sourceMappingURL=index.css.map */

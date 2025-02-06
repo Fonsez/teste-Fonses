@@ -62,3 +62,22 @@ a{
 
 
 
+select, option{
+  height: 48px;
+}
+
+input{
+  accent-color: $primary-normal;
+}
+
+input, select, option, textarea{
+  padding: 10px 12px;
+  background-color: $black-light;
+
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+
+  color: $white-light;
+  @include typeface-2(p3, desktop)
+}

@@ -3,30 +3,38 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="theme-color" content="#06090F">
+
+      <meta name="author" content="Gabriel Fonseca Vergilio">
+      <meta name="description" content="Teste destinado para Vouch Soluções, Feito por Gabriel Fonseca. ">
+
+      <!-- ============title============ -->
       <title>Teste - Fonses</title>
 
-      <!-- CSS -->
+      <!-- ============CSS============ -->
       <link rel="stylesheet" href="./css/index.css">
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-      <!-- SCRIPTS + BABEl -->
+      
+      <!-- ============SCRIPTS + BABEl============ -->
       <script src="./js/svg-inject.min.js"></script>
       <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-      
   </head>
   <body>
+
+    
 
     <!--///////////////////////////
                 INICIO HEADER
         ///////////////////////////
     -->
-        <header class="px-2 py-1">
+        <header class="px-2 py-1" id="header">
 
           <nav>
             <div>
-              <a href=""><img class="logo" src="./assets/icons/logo.svg" alt="logo" onload="SVGInject(this)" ></a>
+              <a href=""><img class="logo" src="./assets/icons/logo.svg" loading="lazy" alt="logo" onload="SVGInject(this)" ></a>
             </div>
 
             <!-- navegação -->
@@ -70,15 +78,15 @@
         ///////////////////////////
     -->
         <section class="container ">
-          <div class="row">
-            <div class="grid-5 mt-3">
+          <div class="row" >
+            <div class="grid-5 mt-3" data-aos="fade-up" data-aos-delay="200">
               <h1 class="">Front-end</h1>
               <h6 class="color-gray mt-1">Teste destinado para Vouch Soluções, Feito por Gabriel Fonseca. </h6>
 
-              <a href="#" class="btn mt-3">Ver mais</a>
+              <a href="#todo" class="btn mt-3">Faça sua lista</a>
             </div>
 
-            <div class="grid-7 p-0">
+            <div class="grid-7 p-0" data-aos="fade-up" data-aos-delay="500">
               <div class="w-100 hidden">
                 <img src="./assets/icons/hero.svg"  onload="SVGInject(this)"/>
               </div>
@@ -93,40 +101,194 @@
                 INICIO SEC TIMER
         ///////////////////////////
     -->
-
+    
     <section class="container">
       <div class="row">
-        <div class="grid-nobreak-12 text-center">
-          <h2 class="color-gradient">Contador Regressivo</h2>
-          <div id="countdownDisplay" style="font-family: 'Rubik', sans-serif; font-size:3rem; font-weight:bold; margin:16px 0; color: #D8DBE3; ">00:10</div>
-            <button id="pauseBtn" class="btn-timer mt-2">Pause</button>
-            <button id="stopBtn" class="btn-timer ml-1">Stop</button>
-            <button id="resetBtn" class="btn-timer ml-1">Reset</button>
+        <div class="grid-nobreak-12 text-center" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="color-gradient" data-aos="fade-up" data-aos-delay="200">Contador Regressivo</h2>
+          <div id="countdownDisplay" style="font-family: 'Rubik', sans-serif; font-size:3rem; font-weight:bold; margin:16px 0; color: #D8DBE3; " data-aos="fade-up" data-aos-delay="300">00:10</div>
+            <button id="pauseBtn" class="btn-timer mt-2" data-aos="fade-up" data-aos-delay="400">Pause</button>
+            <button id="stopBtn" class="btn-timer ml-1" data-aos="fade-up" data-aos-delay="400">Stop</button>
+            <button id="resetBtn" class="btn-timer ml-1" data-aos="fade-up" data-aos-delay="400">Reset</button>
         </div>
       </div>
     </section>
 
 
+        <!--///////////////////////////
+                INICIO SEC TO-DO-LIST
+        ///////////////////////////
+    -->
+
+    <section class="container" id="todo">
+      <div class="row">
+        <div class="grid-12">
+          <h3 class="text-center" data-aos="fade-up" data-aos-delay="200">To-Do <span>List</span></h3>
+          <p class="text-center mb-3 mt-2" data-aos="fade-up" data-aos-delay="200">Fiz o React via script type="text/babel" e CDNs para simplificar a configuração. Dessa forma, não precisei montar todo o ambiente de build com Babel e npm, seria muito demorado e meu React ainda está sendo lapidado... Espero que curtam.</p>
+          <div id="reactRoot" data-aos="fade-up" data-aos-delay="400"></div>
+        </div>
+      </div>
+    </section>
 
 
-
+          <!--///////////////////////////
+                INICIO FOOTER
+        ///////////////////////////
+    -->
+    <footer class="bg-section bt-black">
+      <section class="container pb-0 ">
+          <div class="row flex-center">
+              <img src="./assets/svg/blog-logo2.svg" style="max-width: 96px;" alt="">
+          </div>
+  
+          <div class="row pb-3 bb-black">
+              <div class="grid-3">
+                  <h4>Lorem</h4>
+                  <div class="flex-start-column mt-2">
+                      <a href="#" class="color-gray link-underline">Lorem</a>
+                      <a href="#" class="color-gray link-underline">Lorems</a>
+                      <a href="#" class="color-gray link-underline ">Lorem</a>
+                      <a href="#" class="color-gray link-underline">Lorem</a>
+                  </div>
+                  
+              </div>
+  
+              <div class="grid-3">
+                  <h4>Lorem</h4>
+                  <div class="flex-start-column mt-2">
+                      <a href="#" class="color-gray link-underline">Lorem</a>
+                      <a href="#" class="color-gray link-underline">Lorem</a>
+                      <a href="#" class="color-gray link-underline">Lorem</a>
+                      <a href="#" class="color-gray link-underline">Lorem</a>
+                  </div>
+              </div>
+  
+              <div class="grid-6">
+                  <h4 class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h4>
+                  <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Ornare urna pharetra ut ac, pellentesque. 
+                  </p>
+                  <div class="flex-start-row mt-2">
+                      <input type="text" name="search" id="" placeholder="Lorem lorem">
+                      <button class="btn ml-2">Lorem</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="row">
+              <div class="grid-9">
+                  <p>2025 | Todos os direitos reservados <a href="https://www.linkedin.com/in/fonses/"><span>Fonses</span>.</a></p>
+              </div>
+  
+              <div class="grid-3">
+                  <img src="./assets/svg/icon-facebook.svg" class="icon-s" alt="">
+                  <img src="./assets/svg/icon-instagram.svg" class="icon-s ml-2" alt="">
+                  <img src="./assets/svg/icon-youtube.svg" class="icon-s ml-2" alt="">
+                  <img src="./assets/svg/icon-twitter.svg" class="icon-s ml-2" alt="">
+              </div>
+          </div>
+  
+      </section>
+  </footer>
   </body>
-
-
-
-
-
-
-
-
-
 
   <!--///////////////////////////
                 SCRIPTS
         ///////////////////////////
     -->
   <script src="./js/timer.js"></script>
-  <script src="./js/todo-list.jsx"></script>
   <script src="./js/header.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: "ease-out-quart", //curva de transição
+      duration: 1000, //duração da transição
+      once: true //animar só uma vez
+    });
+  </script>
+  
+  <script type="text/babel">
+    const { useState } = React;
+    function TodoApp() {
+    const [taskText, setTaskText] = useState("");
+    const [tasks, setTasks] = useState([]);
+  
+    // Defina a função de adicionar:
+    function handleAddTask() {
+      // Evita adicionar caso vazio
+      if (!taskText.trim()) return;
+      const newTask = {
+        id: Date.now(),
+        text: taskText,
+        done: false
+      };
+      setTasks([...tasks, newTask]);
+      setTaskText("");
+    }
+  
+    function toggleDone(id) {
+      setTasks(tasks.map(task =>
+        task.id === id ? { ...task, done: !task.done } : task
+      ));
+    }
+  
+    function removeTask(id) {
+      setTasks(tasks.filter(task => task.id !== id));
+    }
+  
+    return (
+    <div className="todo-card">
+      <div className="todo-input-container">
+        <input
+          className="todo-input"
+          type="text"
+          placeholder="Adicione sua tarefa.."
+          value={taskText}
+          onChange={e => setTaskText(e.target.value)}
+          onKeyDown={e => { if(e.key === 'Enter') handleAddTask(); }}
+        />
+        <button className="todo-add-btn" onClick={handleAddTask}>
+          Add
+        </button>
+      </div>
+      <ul className="todo-list">
+      {tasks.map(task => (
+        <li
+            key={task.id}
+            className="todo-item"
+            onClick={() => toggleDone(task.id)}  // Clique no li chama toggleDone
+          >
+            {/* Bolinha (apenas visual) */}
+            <span className={task.done ? "circle filled" : "circle"}></span>
+
+            {/* Texto (sem onClick) */}
+            <span className={task.done ? "todo-label done" : "todo-label"}>
+              {task.text}
+            </span>
+
+            {/* Botão de remover -> impede que o clique também chame toggleDone */}
+            <button
+              className="todo-remove-btn"
+              onClick={(e) => {
+                e.stopPropagation();    // impede “bubbling” para o li
+                removeTask(task.id);
+              }}
+            >
+              X
+            </button>
+      </li>
+      ))}
+  </ul>
+    </div>
+  );
+  }
+  
+  // Monta o app:
+  const root = ReactDOM.createRoot(document.getElementById("reactRoot"));
+  root.render(<TodoApp />);
+  
+  </script>
+  
 
 </html>
