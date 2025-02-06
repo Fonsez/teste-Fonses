@@ -46,7 +46,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🔗 Links Úteis
 
-- [Navegue pelo Site](https://fonsez.github.io/Teste-Fonses/)
+- [Navegue pelo Site](https://fonsez.github.io/teste-Fonses/)
 - [LinkedIn](https://www.linkedin.com/in/fonses/)
 - [Portifa](https://fonsez.github.io/port/)
 
